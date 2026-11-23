@@ -1,0 +1,20 @@
+:root { --uni:#00B58F; --navy:#08284D; --night:#0B132B; }
+body { font-family:'Poppins',sans-serif; color:var(--night); background:#f4faf9; }
+.text-uni { color:var(--uni); }
+.brand { font-weight:700; color:var(--navy); text-decoration:none; font-size:1.4rem; }
+.brand span { color:var(--uni); }
+.btn-uni { background:var(--uni); color:#fff; border:0; border-radius:.75rem; font-weight:600; }
+.btn-uni:hover { background:#009a79; color:#fff; }
+.btn-outline-uni { border:1px solid var(--uni); color:var(--uni); border-radius:.75rem; }
+.navbar .nav-link.active { color:var(--uni); font-weight:600; }
+.hero { background:linear-gradient(120deg,#e6f7f3,#fff); }
+.footer { background:var(--night); color:#fff; }
+/* Back-office */
+.sidebar { position:fixed; inset:0 auto 0 0; width:240px; background:var(--navy); }
+.sidebar .nav-link { color:#cfe; border-radius:.6rem; }
+.sidebar .nav-link.active, .sidebar .nav-link:hover { background:var(--uni); color:#fff; }
+.admin-main { margin-left:240px; }
+.admin-header { background:#fff; border-bottom:1px solid #e3ecea; }
+.stat { background:#fff; border-radius:1rem; padding:1.2rem; display:flex; flex-direction:column; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+.stat i { color:var(--uni); font-size:1.6rem; } .stat b { font-size:1.8rem; }
+@media (max-width:768px){ .sidebar{position:static;width:100%} .admin-main{margin-left:0} }
