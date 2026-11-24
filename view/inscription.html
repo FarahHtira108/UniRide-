@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UniRide — Inscription</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="logo" href="index.html">Uni<span>Ride</span></a>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="burger">☰</label>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="index.html#apropos">À propos</a>
+    <a href="connexion.html" class="visiteur">Connexion</a>
+    <a href="inscription.html" class="btn visiteur" class="actif">S’inscrire</a>
+    <a href="profil.html" class="connecte">Mon profil</a>
+    <a href="admin-dashboard.html" class="admin-lien">Administration</a>
+    <a href="#" id="btnDeconnexion" class="btn btn-outline connecte">Déconnexion</a>
+  </nav>
+</header>
+<main>
+<div class="auth">
+  <aside class="auth-side">
+    <h2>Rejoignez <span>UniRide</span></h2>
+    <p>Créez votre compte et commencez à covoiturer avec d’autres étudiants.</p>
+    <ul><li>Inscription gratuite</li><li>Trajets partagés vers le campus</li><li>Profil sécurisé</li></ul>
+    <a href="index.html">← Retour à l’accueil</a>
+  </aside>
+  <section class="auth-form">
+    <div class="form-box">
+      <h2>Créer un compte</h2>
+      <p class="intro">Remplissez le formulaire pour vous inscrire.</p>
+      <div id="message" class="alert" style="display:none"></div>
+      <form id="formInscription" novalidate>
+        <div class="row">
+          <div class="field"><label>Nom</label><input type="text" name="nom" required></div>
+          <div class="field"><label>Prénom</label><input type="text" name="prenom" required></div>
+        </div>
+        <div class="field"><label>Email</label><input type="email" name="email" required></div>
+        <div class="field"><label>Téléphone</label><input type="tel" name="telephone" required></div>
+        <div class="field"><label>Adresse</label><input type="text" name="adresse"></div>
+        <div class="field">
+          <label>Je m’inscris en tant que</label>
+          <div class="choix-roles">
+            <label class="role-option"><input type="checkbox" name="roles[]" value="Utilisateur" checked><span>🎓 <b>Utilisateur</b><small>Je cherche un trajet</small></span></label>
+            <label class="role-option"><input type="checkbox" name="roles[]" value="Conducteur"><span>🚗 <b>Conducteur</b><small>Je propose des trajets</small></span></label>
+          </div>
+          <small>Vous pouvez choisir les deux. Le rôle Administrateur est attribué uniquement par un administrateur.</small>
+        </div>
+        <div class="row">
+          <div class="field"><label>Mot de passe</label><input type="password" name="password" required></div>
+          <div class="field"><label>Confirmation</label><input type="password" name="confirm" required></div>
+        </div>
+        <p class="erreur-js" id="erreurJs"></p>
+        <button class="btn btn-block" type="submit">S’inscrire</button>
+      </form>
+      <p class="alt">Déjà inscrit ? <a href="connexion.html">Se connecter</a></p>
+    </div>
+  </section>
+</div>
+</main>
+<footer class="footer">
+  <div class="footer-grid">
+    <div><a class="logo" href="index.html">Uni<span>Ride</span></a><p>Le covoiturage des étudiants : économique, écologique et convivial.</p></div>
+    <div><h4>Navigation</h4><ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html#apropos">À propos</a></li>
+      <li><a href="connexion.html">Connexion</a></li>
+      <li><a href="inscription.html">Inscription</a></li>
+      <li><a href="profil.html">Mon profil</a></li></ul></div>
+  </div>
+  <p class="copy">© 2026 UniRide — Tous droits réservés</p>
+</footer>
+<script src="app.js"></script>
+<script src="inscription.js"></script>
+</body>
+</html>
