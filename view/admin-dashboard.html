@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UniRide Admin — Tableau de bord</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin">
+<div class="layout">
+<aside class="sidebar">
+  <a class="logo" href="index.html">Uni<span>Ride</span></a>
+  <small>Back office</small>
+  <a class="lien" href="admin-dashboard.html">📊 Tableau de bord</a>
+  <a class="lien" href="admin-utilisateurs.html">👥 Utilisateurs</a>
+  <a class="lien" href="admin-roles.html">🛡️ Rôles</a>
+  <div class="bas">
+    <a class="lien" href="index.html">🌐 Voir le site</a>
+    <a class="lien" href="#" id="btnDeconnexion">🚪 Déconnexion</a>
+  </div>
+</aside>
+<div class="contenu">
+  <div class="topbar"><h1>Tableau de bord</h1><span class="admin-nom" id="adminNom">👤 …</span></div>
+  <div id="message" class="alert" style="display:none"></div>
+  <div class="stats-grid">
+    <div class="stat-card"><span>Utilisateurs</span><strong id="sTotal">–</strong></div>
+    <div class="stat-card"><span>Comptes actifs</span><strong id="sActifs">–</strong></div>
+    <div class="stat-card"><span>Comptes inactifs</span><strong id="sInactifs">–</strong></div>
+    <div class="stat-card"><span>Inscrits ce mois</span><strong id="sMois">–</strong></div>
+    <div class="stat-card"><span>Emails vérifiés</span><strong id="sVerifies">–</strong></div>
+  </div>
+  <div class="deux">
+    <div class="panel">
+      <h3>Derniers inscrits</h3>
+      <table><thead><tr><th>Nom</th><th>Email</th><th>Date</th><th>Statut</th></tr></thead><tbody id="derniers"></tbody></table>
+      <p style="margin-top:14px"><a href="admin-utilisateurs.html">Voir tous les utilisateurs →</a></p>
+    </div>
+    <div class="panel">
+      <h3>Utilisateurs par rôle</h3>
+      <div id="parRole"></div>
+      <p style="margin-top:8px"><a href="admin-roles.html">Gérer les rôles →</a></p>
+    </div>
+  </div>
+</div>
+</div>
+<script src="admin.js"></script>
+<script src="admin-dashboard.js"></script>
+</body>
+</html>

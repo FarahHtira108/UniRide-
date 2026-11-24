@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UniRide Admin — Utilisateurs</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin">
+<div class="layout">
+<aside class="sidebar">
+  <a class="logo" href="index.html">Uni<span>Ride</span></a>
+  <small>Back office</small>
+  <a class="lien" href="admin-dashboard.html">📊 Tableau de bord</a>
+  <a class="lien" href="admin-utilisateurs.html">👥 Utilisateurs</a>
+  <a class="lien" href="admin-roles.html">🛡️ Rôles</a>
+  <div class="bas">
+    <a class="lien" href="index.html">🌐 Voir le site</a>
+    <a class="lien" href="#" id="btnDeconnexion">🚪 Déconnexion</a>
+  </div>
+</aside>
+<div class="contenu">
+  <div class="topbar"><h1>Utilisateurs</h1><span class="admin-nom" id="adminNom">👤 …</span></div>
+  <div id="message" class="alert" style="display:none"></div>
+  <div class="panel">
+    <div class="outils">
+      <input type="search" id="recherche" placeholder="Rechercher (nom, prénom, email, téléphone)…">
+      <select id="filtreStatut"><option value="">Tous les statuts</option><option value="actif">Actifs</option><option value="inactif">Inactifs</option></select>
+      <button class="btn" id="btnNouveau" type="button">+ Nouvel utilisateur</button>
+    </div>
+    <p id="compteur" style="margin-bottom:10px;color:#4b5d73"></p>
+    <table>
+      <thead><tr><th>ID</th><th>Utilisateur</th><th>Téléphone</th><th>Rôles</th><th>Inscrit le</th><th>Statut</th><th>Actions</th></tr></thead>
+      <tbody id="corps"></tbody>
+    </table>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <h3 id="modalTitre">Nouvel utilisateur</h3>
+      <form id="formUser" novalidate>
+        <input type="hidden" name="idUser">
+        <div class="row">
+          <div class="field"><label>Nom</label><input type="text" name="nom"></div>
+          <div class="field"><label>Prénom</label><input type="text" name="prenom"></div>
+        </div>
+        <div class="field"><label>Email</label><input type="email" name="email"></div>
+        <div class="row">
+          <div class="field"><label>Téléphone</label><input type="tel" name="telephone"></div>
+          <div class="field"><label>Adresse</label><input type="text" name="adresse"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label>Statut</label><select name="statut"><option value="actif">Actif</option><option value="inactif">Inactif</option></select></div>
+          <div class="field"><label>&nbsp;</label><label style="font-weight:500"><input type="checkbox" name="emailVerifie" style="width:auto"> Email vérifié</label></div>
+        </div>
+        <div class="field"><label>Mot de passe <small id="aideMdp"></small></label><input type="password" name="password" autocomplete="new-password"></div>
+        <div class="field"><label>Rôles</label><div class="cases" id="rolesBox"></div></div>
+        <p class="erreur-js" id="erreurJs"></p>
+        <div class="actions-modal">
+          <button type="button" class="btn btn-gris" id="btnAnnuler">Annuler</button>
+          <button type="submit" class="btn">Enregistrer</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<script src="admin.js"></script>
+<script src="admin-utilisateurs.js"></script>
+</body>
+</html>

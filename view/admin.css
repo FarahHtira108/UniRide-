@@ -1,0 +1,57 @@
+body.admin{display:block;background:var(--fond)}
+.layout{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+.sidebar{background:var(--nuit);color:var(--blanc);padding:26px 16px;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
+.sidebar .logo{padding:0 10px}
+.sidebar small{display:block;color:var(--turquoise);padding:0 10px;margin-bottom:28px;font-weight:600}
+.sidebar a.lien{color:var(--blanc);padding:12px 14px;border-radius:10px;margin-bottom:4px;opacity:.85;transition:.2s}
+.sidebar a.lien:hover,.sidebar a.lien.actif{background:var(--marine);color:var(--turquoise);opacity:1}
+.sidebar .bas{margin-top:auto;border-top:1px solid rgba(255,255,255,.12);padding-top:12px}
+.contenu{padding:28px 36px;min-width:0}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;gap:12px;flex-wrap:wrap}
+.topbar h1{color:var(--marine);font-size:1.7rem}
+.admin-nom{background:var(--blanc);padding:8px 16px;border-radius:30px;box-shadow:var(--ombre);color:var(--marine);font-weight:600}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin-bottom:24px}
+.stat-card{background:var(--blanc);border-radius:14px;padding:20px;box-shadow:var(--ombre);border-left:5px solid var(--turquoise)}
+.stat-card span{color:#4b5d73;font-size:.9rem}
+.stat-card strong{display:block;font-size:2.1rem;color:var(--marine)}
+.panel{background:var(--blanc);border-radius:14px;padding:22px;box-shadow:var(--ombre);margin-bottom:24px;overflow-x:auto}
+.panel h3{color:var(--marine);margin-bottom:14px}
+.deux{display:grid;grid-template-columns:1.4fr 1fr;gap:24px}
+table{width:100%;border-collapse:collapse;font-size:.93rem}
+th{text-align:left;color:var(--marine);padding:10px 8px;border-bottom:2px solid var(--turquoise);white-space:nowrap}
+td{padding:10px 8px;border-bottom:1px solid #e6edf2;vertical-align:middle}
+tr:hover td{background:#f6fbfd}
+.vide{text-align:center;color:#6b7a8c;padding:24px}
+.badge-actif{background:var(--turquoise)}
+.badge-inactif{background:#d93025}
+.barre-ligne{margin-bottom:14px}
+.barre-ligne div:first-child{display:flex;justify-content:space-between;font-size:.9rem;color:var(--marine);margin-bottom:4px}
+.barre{height:10px;background:#e4ebf1;border-radius:6px;overflow:hidden}
+.barre i{display:block;height:100%;background:var(--turquoise);border-radius:6px}
+.outils{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px;align-items:center}
+.outils input,.outils select,.form-role input{padding:11px 14px;border:1.5px solid #cfd9e2;border-radius:10px;font-size:1rem;background:var(--blanc)}
+.outils input{flex:1;min-width:200px}
+.outils input:focus,.outils select:focus,.form-role input:focus{outline:none;border-color:var(--turquoise)}
+.btn-sm{padding:6px 12px;font-size:.82rem;border-radius:8px}
+.btn-gris{background:#e4ebf1;border-color:#e4ebf1;color:var(--marine)!important}
+.btn-gris:hover{background:#cfd9e2;border-color:#cfd9e2}
+.btn-danger{background:#d93025;border-color:#d93025}
+.btn-danger:hover{background:#a31d13;border-color:#a31d13}
+.actions-ligne{display:flex;gap:6px;flex-wrap:wrap}
+.form-role{display:flex;gap:10px;flex-wrap:wrap}
+.form-role input{flex:1;min-width:180px}
+.modal{display:none;position:fixed;inset:0;background:rgba(11,19,43,.6);z-index:50;align-items:center;justify-content:center;padding:20px}
+.modal.ouvert{display:flex}
+.modal-box{background:var(--blanc);border-radius:16px;padding:28px;width:100%;max-width:560px;max-height:92vh;overflow-y:auto}
+.modal-box h3{color:var(--marine);margin-bottom:16px}
+.modal-box select{width:100%;padding:12px 14px;border:1.5px solid #cfd9e2;border-radius:10px;font-size:1rem}
+.cases{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:10px}
+.cases label{font-weight:500;display:flex;align-items:center;gap:6px;cursor:pointer}
+.actions-modal{display:flex;gap:10px;justify-content:flex-end;margin-top:10px}
+.field small{color:#6b7a8c}
+@media(max-width:860px){
+  .layout{grid-template-columns:1fr}
+  .sidebar{position:static;height:auto;flex-direction:row;flex-wrap:wrap;gap:6px;padding:14px}
+  .sidebar small{display:none}.sidebar .bas{margin:0;border:none;padding:0;display:flex;gap:6px}
+  .contenu{padding:20px 14px}.deux{grid-template-columns:1fr}
+}

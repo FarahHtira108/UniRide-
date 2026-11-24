@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UniRide Admin — Rôles</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin">
+<div class="layout">
+<aside class="sidebar">
+  <a class="logo" href="index.html">Uni<span>Ride</span></a>
+  <small>Back office</small>
+  <a class="lien" href="admin-dashboard.html">📊 Tableau de bord</a>
+  <a class="lien" href="admin-utilisateurs.html">👥 Utilisateurs</a>
+  <a class="lien" href="admin-roles.html">🛡️ Rôles</a>
+  <div class="bas">
+    <a class="lien" href="index.html">🌐 Voir le site</a>
+    <a class="lien" href="#" id="btnDeconnexion">🚪 Déconnexion</a>
+  </div>
+</aside>
+<div class="contenu">
+  <div class="topbar"><h1>Rôles</h1><span class="admin-nom" id="adminNom">👤 …</span></div>
+  <div id="message" class="alert" style="display:none"></div>
+  <div class="panel">
+    <h3 id="titreForm">Ajouter un rôle</h3>
+    <form id="formRole" class="form-role" novalidate>
+      <input type="hidden" name="idRole">
+      <input type="text" name="nomRole" placeholder="Nom du rôle (ex : Conducteur)" maxlength="50">
+      <button class="btn" type="submit">Enregistrer</button>
+      <button class="btn btn-gris" type="button" id="btnAnnuler" style="display:none">Annuler</button>
+    </form>
+  </div>
+  <div class="panel">
+    <h3>Liste des rôles</h3>
+    <table>
+      <thead><tr><th>ID</th><th>Rôle</th><th>Utilisateurs</th><th>Actions</th></tr></thead>
+      <tbody id="corps"></tbody>
+    </table>
+  </div>
+</div>
+</div>
+<script src="admin.js"></script>
+<script src="admin-roles.js"></script>
+</body>
+</html>
